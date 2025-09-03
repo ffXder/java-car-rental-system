@@ -1,4 +1,4 @@
-package System;
+package src.System;
 
 public class Customer {
     private String customerId;

@@ -1,9 +1,10 @@
+package src.System;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class Mains {
+public class Main {
     private static List<Vehicle> cars = new ArrayList<>();
     private static List<Customer> customers = new ArrayList<>();
     private static List<Rental> rents = new ArrayList<>();
@@ -103,7 +104,7 @@ public class Mains {
 
                 System.out.println("You have successfully reserved!");
                 System.out.println("==== Rental Information ====");
-                System.out.println("Customer ID: " + customer.getcustomerID() + ", Name: " + customer.getName());
+                System.out.println("Customer ID: " + customer.getCustomerID() + ", Name: " + customer.getName());
                 System.out.println("Vehicle ID: " + selectedVehicle.getVehicleID() + ", Model: " + selectedVehicle.getVehicleModel() + ", " + selectedVehicle.getVehicleType());
                 System.out.println("Rental Price: Php: " + totalRentPrice);
             } else {
@@ -168,7 +169,7 @@ public class Mains {
 
     private static Rental findRentedCar(String customerID) {
         for (Rental rental : rents) {
-            if (rental.getCustomer().getcustomerID().equalsIgnoreCase(customerID)) {
+            if (rental.getCustomer().getCustomerID().equalsIgnoreCase(customerID)) {
                 return rental;
             }
         }
