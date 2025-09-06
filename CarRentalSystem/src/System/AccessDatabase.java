@@ -30,8 +30,8 @@ public class AccessDatabase {
             rs.close();
             st.close();
             con.close();
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }
